@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Bangers&family=Knewave&family=Lobster&family=Open+Sans&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='StyleSheet' href='css/styles.css' type='text/css')
+
+    
+  body
+    .sidebar
+      img(src='images/logo.png' alt='Logo' style="width:180px; height:180px")
+      .mylinks
+        a.active(href='layout') Shop
+        a(href='#about') Login
+        a(href='register') Register
+
+  block main
+    main
+      .pageHeading
+        .text Summer  
+        .text1 Collection
+      .row
+        .column 
+          img(src='images/male.jpeg' alt='boy' style="width:100%; height: 550px")
+          .caption MALE
+        .column  
+          img(src='images/girl.jpeg' alt='girl' style="width:100%; height: 550px")     
+          .caption FEMALE
+  //footer
+  .footer
+    .flex-cointainer
+      .left
+        .bottomtext Subscribe To Newsletter
+          form.form-inline(action='/action_page.php')
+            input#email(type='email' placeholder='Enter email' name='email' style='width: 40%; margin-right: 20px; height: 20px')
+            button(type='submit' style='width: 20%; height: 26px') Submit
+      .middle 
+        .infoPolicy
+          .info INFO
+          .policy POLICY
+      .right
+        .social
+          .facebook
+            i.fa.fa-facebook(style='font-size:42px;color:white')
+          .instagram
+            i.fa.fa-instagram(style='font-size:42px;color:white')  
+
+
+        
+

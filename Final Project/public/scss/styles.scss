@@ -1,0 +1,398 @@
+@import "colors.scss";
+@import "nav.scss";
+
+/* Variables */
+$fontFamily1: Arial, Helvetica, Sans-Serif;
+$fontFamily2: 'Sacramento', cursive;
+$fontSizeH1: 3em;
+$fontSizeH2: 2.5em;
+$fontSizeH3: 2em;
+$fontSizeSmall: 0.85em;
+
+
+// html {
+//   // Operations
+//   font-size: 0.8em + 0.2;           //1 
+//   width: ( 100% / 2) + 50%      //75;
+// }
+
+// body{
+//   font-family: $fontFamily1;
+//   background: $backgroundColor1;
+// }
+
+// header {
+//     height: 50px;
+//     width: 1350px;
+//     margin: 0.8em auto 1em auto;
+// }
+
+// main {
+//     background: $mainColor;
+//     width: 1350px;
+//     min-height:535px;
+//     padding: 1.5%;
+//     margin: 0 auto;
+
+//     #intro-image {
+//       float: left;
+//       width: 800px;
+
+//       img {
+//         width: 800px;
+//       }
+//     }
+
+//     #intro-text {
+//       width: 550px;
+//       height: 407px;
+//       float:left;
+//       background: $sectionColor;
+//       text-align: center;
+//       padding-top: 8em;
+
+//       .newheading {
+//         font-size: $fontSizeSmall;
+//         color: $color3;
+//         font-family: fontFamily2;// this new
+//       }
+
+//       span {
+//         font-family: $fontFamily2;
+//         font-size: 2em;
+//       }
+//     }
+// }
+
+// footer {
+//     width: 1350px;
+//     margin: 2em auto;
+//     padding-left: 80px;
+//     font-size: $fontSizeSmall;
+// }
+
+// // @extend 
+// button {
+//   color: $color4;
+//   width: 100px;
+//   height: 40px;
+//   background: $backgroundColor1;
+//   margin-top: 2em;
+// }
+// .submit-buttton {
+//   @extend button;
+//   border: 1px $color3;
+// }
+// /* css for the registration form and errors */
+
+// .form-registration {
+//   max-width: 330px;
+//   padding: 15px;
+//   margin: 0 auto;
+// }
+// .form-registration {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+// .form-registration input{ //-- added this--
+//   width: 100%;
+//   margin: 0px 0 10px;
+// }
+// .form-registration .btn {
+//   flex: 1 0 100%;
+// }
+
+// .myheading {
+//   text-align: center;
+// }
+
+// .my-errors {
+//   margin: 0 auto;
+//   padding: 0;
+//   list-style: none;
+//   color: #333;
+//   font-size: 1.2rem;
+//   display: table;
+// }
+// .my-errors li {
+//   margin: 0 0 1rem;
+// }
+// .my-errors li:before {
+//   content: "! Error : ";
+//   color: #f00;
+//   font-weight: bold;
+// }
+
+// .mybutton {
+//   width: 100%;
+//   margin: 0px 0 10px;
+// }
+
+// .thanks {
+//   text-align: center;
+// }
+
+// //syle for table display
+
+// .listing-table {
+//   width: 80%;
+//   margin: auto;
+// }
+// .listing-table th,
+// .listing-table td {
+//   padding: 10px;
+//   border-bottom: 1px solid #666;
+//   background-color: white;
+// }
+// .listing-table th {
+//   background: #000;
+//   color: #fff;
+// }
+// .listing-table td:first-child,
+// .listing-table th:first-child {
+//   border-right: 1px solid #666;
+// }
+
+//Sidebar
+.sidebar {
+  background-color: #0D0E0F;
+  width: 200px;
+  height: 85%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidebar img {
+  padding: 10px;
+}
+
+.mylinks{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 10%;
+}
+
+// body and main
+
+body {
+  background-color: black;
+}
+
+main {
+  margin-left: 250px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+// Heading of the page
+.pageHeading {
+  height: 25%;
+}
+
+.text {
+  color: white;
+  font-size: 75px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 20px;
+}
+
+.text1 {
+  color: white;
+  font-size: 85px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+  margin-left: 15%;
+}
+// images and caption
+.row {
+  display: flex;
+  height: 60%;
+}
+
+.column {
+  flex: 45.5%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.column img {
+  height: 60%;
+}
+
+.caption {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  font-family: $fontFamily1;
+}
+// footer
+.footer {
+  background-color: #0D0E0F;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  color: white;
+}
+
+.flex-cointainer {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  height: 15%;
+}
+
+.left{
+  padding: 20px 10px;
+  flex: 40%;
+  text-align: left;
+}
+
+.bottomtext {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top:20px
+}
+
+.middle {
+  padding: 20px 10px;
+  flex: 35%;
+}
+.infoPolicy {
+  display: inline;
+}
+
+.info {
+  display: inline;
+  margin-right: 110px;
+}
+
+.policy {
+  display: inline;
+}
+
+.right {
+  padding-top: 3%;
+  flex: 15%;
+  align-items: center; 
+}
+
+.social {
+  display: inline;
+}
+
+.facebook {
+  display: inline;
+  margin-right: 10px;
+}
+
+.instagram {
+  display: inline;
+}
+
+
+
+
+// register form 
+
+.myheading {
+  text-align: center;
+  color: white;
+  font-size: 85px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+  margin-top: 20px;
+}
+
+.form-registration {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+}
+
+.form-registration {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.form-registration input{ 
+    width: 100%;
+    height: 40px;
+    margin: 0px 0 10px;
+  }
+
+.form-registration .btn {
+    flex: 1 0 100%;
+  }
+
+.my-errors {
+    margin: 50px auto 0 auto;
+    padding: 0;
+    list-style: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: table;
+  }
+
+.my-errors li {
+    margin: 0 0 1rem;
+    color: white;
+  }
+
+.my-errors li:before {
+    content: "! Error : ";
+    color: #f00;
+    font-weight: bold;
+  }
+
+.mybutton {
+      width: 100%;
+      margin: 0px 0 10px;
+      height: 40px;
+    }
+
+// thankyou
+
+.thanks {
+  color: white;
+  text-align: center;
+  font-size: 85px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+}
+
+//syle for table display
+
+.listing-table {
+  width: 80%;
+  margin: auto;
+}
+.listing-table th,
+.listing-table td {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  background-color: white;
+}
+.listing-table th {
+  background: #000;
+  color: #fff;
+}
+.listing-table td:first-child,
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
