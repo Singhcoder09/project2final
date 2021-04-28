@@ -1,3 +1,4 @@
+
 const path = require('path');
 const auth = require('http-auth');
 const bcrypt = require('bcryptjs');
@@ -9,12 +10,50 @@ const express = require('express');
 const mongoose = require('mongoose');
 const {check, validationResult } = require ('express-validator');
 
+const passport = require('passport');
+
 const router = express.Router();
 const Registration = mongoose.model('Registration');
+
+const User = require('../models/Registration')
+
+
+router.get('/login', function(req, res) {
+    res.render('login', {title: 'Shop'});
+});
+
+router.post('/login', (req, res, next) => {
+    passport.authenticate("local", (err, theUser, errorMessage) => {
+      if (!theUser) {
+        // Unauthorized
+        res.render('login', {errorMessage: 'Wrong password or username'}); 
+        return;
+      }
+  
+      // save user in session: req.user
+      req.login(theUser, (err) => {
+        if (err) {
+          // Session save went bad
+          return next(err);
+        }
+  
+        // All good, we are now logged in and `req.user` is now set
+        res.redirect('/layout')
+      });
+    })(req, res, next);
+});
 
 
 router.get('/layout', function(req, res) {
     res.render('layout', {title: 'Shop'});
+});
+
+router.get('/mencollection', function(req, res) {
+    res.render('mencollection', {title: 'Shoping'});
+});
+
+router.get('/femalecollection', function(req, res) {
+    res.render('femalecollection', {title: 'Shoping'});
 });
 // 
 router.get('/register', function(req, res) {

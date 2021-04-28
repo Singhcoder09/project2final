@@ -1,0 +1,53 @@
+doctype html
+
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  link(rel='StyleSheet' href='css/login.css' type='text/css')
+  title Login
+
+section.form.my-4.mx-5
+  .container
+    .row.no-gutters
+      .col-lg-5
+        img.img-fluid(src='images/logo.png' alt='logo') 
+      .col-lg-7(class="px-5 pt-5")
+        h4(class="font-weight-bold my-4") Sign into your account
+        section#intro-register
+          -data = data || {}
+          if errors
+              ul
+                  for error in errors
+                      li= error.msg
+
+          form(action="/login" method="POST" class="form-registration")
+            .form-row
+             .col-lg-7
+                label(for="username" class="my-2") Username:
+                input(
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="form-control"
+                    value=data.username
+                )
+            .form-row
+             .col-lg-7
+                label(for="password" class="my-2") Password:
+                input(
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    value=data.password
+                    required
+                )
+            form-row
+             .col-lg-7    
+                button(type="submit" class=" btn form-control my-3 p4" value="Register" required) Login
+            p
+              | Don&apos;t have an account 
+              a(href='register') Register here

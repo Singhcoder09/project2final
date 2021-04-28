@@ -1,5 +1,7 @@
 @import "colors.scss";
 @import "nav.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 /* Variables */
 $fontFamily1: Arial, Helvetica, Sans-Serif;
@@ -9,149 +11,6 @@ $fontSizeH2: 2.5em;
 $fontSizeH3: 2em;
 $fontSizeSmall: 0.85em;
 
-
-// html {
-//   // Operations
-//   font-size: 0.8em + 0.2;           //1 
-//   width: ( 100% / 2) + 50%      //75;
-// }
-
-// body{
-//   font-family: $fontFamily1;
-//   background: $backgroundColor1;
-// }
-
-// header {
-//     height: 50px;
-//     width: 1350px;
-//     margin: 0.8em auto 1em auto;
-// }
-
-// main {
-//     background: $mainColor;
-//     width: 1350px;
-//     min-height:535px;
-//     padding: 1.5%;
-//     margin: 0 auto;
-
-//     #intro-image {
-//       float: left;
-//       width: 800px;
-
-//       img {
-//         width: 800px;
-//       }
-//     }
-
-//     #intro-text {
-//       width: 550px;
-//       height: 407px;
-//       float:left;
-//       background: $sectionColor;
-//       text-align: center;
-//       padding-top: 8em;
-
-//       .newheading {
-//         font-size: $fontSizeSmall;
-//         color: $color3;
-//         font-family: fontFamily2;// this new
-//       }
-
-//       span {
-//         font-family: $fontFamily2;
-//         font-size: 2em;
-//       }
-//     }
-// }
-
-// footer {
-//     width: 1350px;
-//     margin: 2em auto;
-//     padding-left: 80px;
-//     font-size: $fontSizeSmall;
-// }
-
-// // @extend 
-// button {
-//   color: $color4;
-//   width: 100px;
-//   height: 40px;
-//   background: $backgroundColor1;
-//   margin-top: 2em;
-// }
-// .submit-buttton {
-//   @extend button;
-//   border: 1px $color3;
-// }
-// /* css for the registration form and errors */
-
-// .form-registration {
-//   max-width: 330px;
-//   padding: 15px;
-//   margin: 0 auto;
-// }
-// .form-registration {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// .form-registration input{ //-- added this--
-//   width: 100%;
-//   margin: 0px 0 10px;
-// }
-// .form-registration .btn {
-//   flex: 1 0 100%;
-// }
-
-// .myheading {
-//   text-align: center;
-// }
-
-// .my-errors {
-//   margin: 0 auto;
-//   padding: 0;
-//   list-style: none;
-//   color: #333;
-//   font-size: 1.2rem;
-//   display: table;
-// }
-// .my-errors li {
-//   margin: 0 0 1rem;
-// }
-// .my-errors li:before {
-//   content: "! Error : ";
-//   color: #f00;
-//   font-weight: bold;
-// }
-
-// .mybutton {
-//   width: 100%;
-//   margin: 0px 0 10px;
-// }
-
-// .thanks {
-//   text-align: center;
-// }
-
-// //syle for table display
-
-// .listing-table {
-//   width: 80%;
-//   margin: auto;
-// }
-// .listing-table th,
-// .listing-table td {
-//   padding: 10px;
-//   border-bottom: 1px solid #666;
-//   background-color: white;
-// }
-// .listing-table th {
-//   background: #000;
-//   color: #fff;
-// }
-// .listing-table td:first-child,
-// .listing-table th:first-child {
-//   border-right: 1px solid #666;
-// }
 
 //Sidebar
 .sidebar {
@@ -170,6 +29,12 @@ $fontSizeSmall: 0.85em;
   font-size: 25px;
   color: white;
   display: block;
+}
+.sidebar a:hover{
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 .sidebar img {
@@ -376,6 +241,13 @@ main {
   font-family: 'Lobster', cursive;
 }
 
+.mylogin {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+}
+
 //syle for table display
 
 .listing-table {
@@ -395,4 +267,90 @@ main {
 .listing-table td:first-child,
 .listing-table th:first-child {
   border-right: 1px solid #666;
+}
+
+//collections
+.container {
+  height: 72vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.boyHeading{
+  color: white;
+  font-size: 90px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+  margin-top: 30px;
+  margin-left: 40%;
+}
+
+// For I-pad and I-pad Pro
+@media (max-width: 1024px) {
+  * {
+    box-sizing: border-box;
+  }
+  
+  .pageHeading {
+    margin-top: 40px;;
+  }
+
+  .text {
+    font-size: 80px;
+  }
+
+  .text1{
+    font-size: 90px;
+  }
+
+  .column img {
+    //width: 300px !important;
+    height: 600px !important;
+  }
+
+  .row {
+    margin-top: 100px;
+  }
+
+  .boyHeading{
+    color: white;
+    font-size: 90px;
+    font-weight: bolder;
+    font-family: 'Lobster', cursive;
+    margin-top: 75px;
+    margin-left: 32%;
+  }
+
+  .container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+  }
+
+  // register form 
+
+.myheading {
+  text-align: center;
+  color: white;
+  font-size: 85px;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+  margin-top: 115px;
+}
+
+  // .row {
+  //   display: block;
+  //   height: 60%;
+  // }
+  
+  // .column {
+  //   padding: 5px;
+  //   margin-right: 10px;
+  //   width: 300px;
+  //   display: block;
+  // }
 }

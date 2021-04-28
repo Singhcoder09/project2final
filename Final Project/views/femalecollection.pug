@@ -1,0 +1,35 @@
+extends layout
+
+block main
+  main
+    .boyHeading GirlZ
+    .container
+        .glide
+            .glide__track(data-glide-el='track')
+                ul.glide__slides
+                    li.glide__slide 
+                        img(src='images/girl.jpeg' alt='girl' style="width:100%; height: 550px")
+                    li.glide__slide 
+                        img(src='images/girl1.png' alt='girl1' style="width:100%; height: 550px")
+                    li.glide__slide 
+                        img(src='images/girl2.jpeg' alt='girl2' style="width:100%; height: 550px")
+                    li.glide__slide 
+                        img(src='images/girl3.png' alt='girl3' style="width:100%; height: 550px")    
+            .glide__arrows(data-glide-el='controls')
+                button.glide__arrow.glide__arrow--left(data-glide-dir='<') prev
+                button.glide__arrow.glide__arrow--right(data-glide-dir='>') next
+  script(src='https://cdn.jsdelivr.net/npm/@glidejs/glide')
+  script.
+    const config = {
+        type: 'carousel',
+        perView: 3,
+        breakpoints: {
+            600: {
+                perView: 1
+            },
+            1024: {
+                perView: 2
+            }
+        }
+    }
+    new Glide('.glide',config).mount()
